@@ -1,0 +1,22 @@
+# Secrets: real values live here, only the .example is committed
+*.pkrvars.hcl
+*.auto.pkrvars.hcl
+!*.pkrvars.hcl.example
+
+# Large or generated binaries (virtio-win.iso is downloaded by make-seed.sh;
+# win2022-seed.iso is generated and contains the admin password)
+*.iso
+
+# Packer artifacts and crash logs
+packer_cache/
+crash.log
+packer-debug.log
+
+# make-seed.sh temp dirs and partial downloads
+win2022-seed.*/
+*.part
+
+# Editor / OS noise
+*.swp
+*~
+.DS_Store
